@@ -1,0 +1,409 @@
+Inbuilt Musicality
+==================
+:Date: 2018
+:Author: Ichthyostega
+:Toc:
+:toclevels: 3
+
+.Abstract
+***********************************
+This Workshop demonstrates the use of the Yoshimi soft synthesiser as a platform
+for building entirely synthetic musical instruments, based on exploring the structure
+and interplay of defining traits within musical sound. Starting from characteristic
+overtones and spectral patterns as foundation, the specific body of the tone
+can be shaped by fine tuning the transients. Further techniques of transforming
+the sound are used to build a fabric of related sound layers and create a distinct
+voice, able to operate within the musical context of the composition.
+***********************************
+
+.Keywords
+Synthesis, texture, voicing, instrument, musical context, musicality.
+
+.Remark
+We present here a Plan for a Workshop that includes Demonstrations at LAC 2018 Berlin.
+While the following text outlines the underlying theoretical connections, the actual presentation
+will focus on those topics which can be demonstrated life with ZynAddSubFX / Yoshimi.
+
+The presentation will last between 90 minutes and 2 hours.
+
+
+Motivation
+----------
+Building electronic instruments
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Once upon a time, there was an Avant-garde movement known as _Electronic Music_ -- a trend departing from a worn out
+tradition, with a goal to create music through means appropriate to modern times -- the music for the Age of Cybernetics.
+Then someone invented _Sampling_, and soon thereafter, the revolutionary project, the renewed music, the conquering
+of new frontiers was all but forgotten. ``Electronic'' sound is more of a recurring fad today, and indeed we produce
+contemporary music using computers, a quantity manufacturing with conditioned captures of traditional instruments
+aligned to the grid of the dreary drum machine.
+
+The work presented here draws from that abandoned future of the past: it expands upon the idea of an entirely synthetic
+musical instrument. Yet to _build_ such an instrument, we _foremost need to understand_ what makes a music instrument
+_viable in a musical context._ The following workshop demonstrates what it takes to build such an instrument.
+
+Mainstream theory
+~~~~~~~~~~~~~~~~~
+Today we share a commonplace understanding of musical sound, which serves as a foundation of pretty much any
+practical tool for computer music production: Any _Sound Event_ happens at a well-defined time position. It
+is modelled as _spectral content_ composed from clean sine oscillations, _packaged_ into an ADSR-Envelope, with a
+_steady state_ to form the body of the note. While well suited as a construction blueprint for simplified sound generation,
+this theory is woefully inadequate as a means of describing and understanding real music. Even the most basic musical phenomena,
+when perceived through this theory, are bound to appear as shockingly complex, highly derivative, accidental incidents.
+So this model should thus be confined to what it actually is: a means for technical construction.
+
+Musical phenomena
+~~~~~~~~~~~~~~~~~
+Yet we may employ those new technical means to gain a fresh view on musical phenomena. When we look at physical
+measurements of musical sound, the most striking property to observe is that -- as a function of time -- musical sound
+is _cyclic_ but _not periodic_. In real music, there are _never two identically repeated_ ``oscillations''. Infinite 
+sine functions might be an effective mathematical tool, but can not be taken as the _fundamental phenomenon_ of musical
+sound.footnote:[Dennis Gabor. 1947. »Acoustical quanta and the theory of hearing« Nature 159(4044): p.591:
+``Fourier analysis is a timeless description in terms of exactly periodic waves of infinite duration.
+On the other hand it is our most elementary experience that sound has a time pattern as well as a frequency pattern'' ]
+If we stick to the phenomena, rather a train of micro structures known as »Sonic Grains« can be found as constituent
+of any musical sound. These grains each possess a temporal shape and sonic character, which as such is just barely perceptible.
+As a stream, these meld into a clear and solid image, to convey _simultaneously_ the presence of a character, musical
+key and spatiality. Yet when analysed in terms of time point and frequency, the granular structure leads to an
+irreducible ambiguity.
+
+Foremost, there is no such thing as ``steady state'' in real music; the sonic texture is in constant change. 
+And while numerous sonic transients exist at any level, the relevance and meaning of those transients depends on
+context, and they work together to create context. Music requires room -- the room transforms sound to create the sonic
+Gestalt as implied by the composition. Just any music instrument in isolation does not sound quite right. The actual
+room of performance determines the timings, the _adequate tempi._ Musical instruments, when played in ensemble and
+within an actual room, produce an inherent temporal structure and evolution, to which the musicians align while playing.
+And last but not least, music well performed conveys inherent _musical spatiality:_ To state that a melody rises above
+the harmonic foundation, submerges, crosses another line -- any of this is not a way of ``metaphoric'' speaking. It is
+an _immediate_ preceptive quality, to be ``seen'' once you lend your ear to the way of the music.
+            
+ZynAddSubFX / Yoshimi
+~~~~~~~~~~~~~~~~~~~~~
+There are several well known and thoroughly researched algorithms and techniques to generate artificial sound structures
+to resemble the aforementioned musical phenomena: Additive and Subtractive Synthesis, Waveshaping, Granulation.
+So the obvious plan for our undertaking would be to use a synthesis language, hook up implementations of these techniques,
+and to assemble a framework and workbench for building synthetic musical instruments.
+
+Fortunately there is an alternative to this somewhat tedious working plan: the »**ZynAddSubFX**«footnote:[
+ZynAddSubFX is a software synthesizer created by Nasca Octavian Paul in 2002 and released under the GPL.]
+/ »**Yoshimi**«footnote:[
+This work builds upon the »Yoshimi« fork of ZynAddSubFX: http://yoshimi.sourceforge.net/ ]
+soft synthesizer supports these techniques, is music-oriented from ground up, offers sufficiently flexible wiring,
+solves a lot of setup and configuration issues and is ready to be used right away. If we accept some immanent
+limitations of the software, we're able to build our musical synthetic instruments as presets for Yoshimi, arrange
+them with a standard MIDI sequencer or play them on a keyboard with velocity sensing.
+
+
+Spectral Structure
+------------------
+As most soft synthesizers, Yoshimi's construction is based on the common understanding of musical events as spectral
+content encased within an envelope. Consequently, our instrument building task has to proceed through various stages
+to achieve the musical quality we're aiming at. Our point of departure is an entirely static view of frequency content,
+and so we have to consider how to build our spectrums first.
+
+Overtones
+~~~~~~~~~
+Character-Overtones
+^^^^^^^^^^^^^^^^^^^
+The first few _harmonic overtones_ are set apart by their ability to operate as distinct entities, and simultaneously
+lend a strong characteristic colouration to the tone as a whole. They define the five basic flavours of colour a spectrum
+can obtain; it is important to recognise their unique character: Octaves, Fifths, Third, Seventh, Ninth. Other colours emerge
+from mixing and shading them, both simultaneously and in temporal succession. Higher multiples of these overtones exhibit
+similar qualities, allowing each of them to fund a _family,_ which in turn allows them to obtain a _differential quality_
+on their own. The differential character of especially the fifths, octaves and thirds is a defining quality of any
+_plenum sound_. Moreover, the character overtones can be classified into _warm colours_ (3,4,5,7) and _cold colours_ 
+(6,8,9 +higher). All of this is common basic knowledge of any instrument builder
+and has been known for a long time indeed.
+
+higher Overtones
+^^^^^^^^^^^^^^^^
+The higher partials typically act in combinations and patterns, rather than as individual overtones. Filling in higher
+partials allows us to add _sharpness_ to the sound, or a _buzzing_, noisy quality, or it may yield a _bowing_, string-like
+or wind-like identity. In fact, it is the distribution or patterning of many partials what gives _clarity and distinctness_
+to sound; the more well organised partials a tone is composed from, the more discernible and delineated it becomes.
+
+And since in music everything is in constant movement and flux, ``patterning'' means that a series of partials
+_appears and moves together._ A given individual overtone may thus participate in several patterns any given time --
+and it may _stand out_ or _be reduced_ with respect to a common pattern, a situation which leads to _coloration of the pattern_
+through the character of that overtone. (Example: reducing the octaves -> dry clarinet-like sound)
+
+There is kind of a ``neutral baseline pattern'', defined by a spectrum with roughly exponentially decaying intensities
+in the overtones. Such a spectrum sounds clean, well-bound and solid. In perception, such patterns _fuse down_ into
+the position of the fundamental. The degree of decay towards higher partials allows one to adjust the brightness of
+the resulting tone, without changing its musical key. An important consequence to realise is that the _energy of
+sound_ is thus not necessarily located at the key where you perceive its _volume_ or _loudness_: rather, you
+perceive its presence at the ``grounding point'' of the recognised pattern. This is essential knowledge for
+building a voice able to act musically in the range below the small octave.
+
+Archetypes
+~~~~~~~~~~
+Based on these fundamental building blocks, it is important to realise that we can shape spectra only in a limited number
+of _archetypical ways_ -- and while these can be combined to some degree, we should always observe the envisioned
+leading quality.
+
+Fundamental-dominated:: fuses totally down into the fundamental tone. Any overtone character remains subliminal
+Flute-like:: a small number of character overtones appear as individuals, but always line up behind the fundamental
+String-like:: a tightly woven fabric of overtone-families, each of which stays aligned and oscillates independently
+radiant:: energy distributed towards higher partials, but clustered towards the ``backbone'' (octaves, fifths), moving uniformly
+sharp:: excess energy dissipated into higher partials, raising above the exponential baseline; some inharmonic partials
+noisy:: chaotic swarm-like movements, no families, many inharmonic partials
+
+It is difficult to produce String-like, radiant and noisy spectra with a conventional static wavetable and additive synthesis.
+
+Registers
+~~~~~~~~~
+If we watch a given spectrum when played over various octaves, it becomes obvious how its constituents are moved into
+varying degrees of perceptibility. This phenomenon is what gives rise to the existence of different _registers,_ which
+in turn indicates the path we have to follow when shaping a spectrum to match our expectations.
+
+Melody::
+  at the melody level, the full round of character overtones up to partial No.12 is perceptible, revealing a clear yet
+  simple _primary character of the voice._ What is out of square here can never be amended with any further adornments.
+High Register::
+  when moving up, the audible part of any spectrum becomes reduced to the bare minimum, it looses characteristic traits
+  and turns over to a flute-like or a fundamental-dominated type. Most voices loose delineation here, some disintegrate
+  entirely.
+Bass::
+  towards the bass side, more and more higher partials enter the stage, revealing either the bowing, radiant or
+  noisy traits of the spectrum. Possibly some of the additional structures do not mesh up with the primary structure
+  of the voice, causing them to split off in perception as separate entities, disturbing the overall picture. A voice
+  well suited for use in the bass register typically contains several self-similar copies of its basic structure,
+  transposed towards higher overtones.
+The small Octave::
+  located right in the middle of the sonic space, this register is the most difficult to get right. The defining
+  pattern unfolds to its full potential here, while additional elements from the bass side emerge. Without careful
+  attention, most spectra will suffer from a sudden break or rupture at some point within that range, rendering the
+  register unsuitable for melodic use.
+
+Floor Levels
+^^^^^^^^^^^^
+In perception, we locate a voice at the ``grounding point'' of its defining pattern, while the actual spectral content
+is distributed upwards. The spectra of several voices playing together are thus interleaved -- and their ability either
+to form chords, or to move as independent lines relates to their spectra either fusing into a self-similar compound
+structure, or to retain its characteristic trait even when interleaved. Thus the way to shape a voice without distorting
+its character is to redistribute within the families formed above its defining traits.
+
+A melody together with its immediate, close harmonies occupies a narrow band within tonal space, which we designate as
+``Floor Level''. Adding another voice with a similar spectral structure just doubles up and thus increases the weight
+of the first voice. If we want to allocate a musically independent line to the same floor level, we need a voice with
+a distinctively different spectral structure. In the middle range between F3 and F4 two floor levels can be packaged,
+while down in the contra octave, the floor level spacing is typically larger than a full octave.
+
+Temporal Structure
+------------------
+Building on the abilities of spectral structure solely, musical possibilities would be quite limited.
+Yet _music is movement_ essentially, and movement reshapes any tone -- even more, movement is what shapes some emergent
+spectral coloration into a distinct tone. A musical tone, while constantly in movement, appears uniform and succinct
+without being generic -- properties hard to achieve by sound synthesis. We're bound to combine several techniques,
+like layering, moving filters and precisely tuned, complex envelopes to get anywhere close.
+
+Dimensions
+~~~~~~~~~~
+While unfolding, in his entrance, a tone passes over several temporal dimensions, each with its own form of appearance
+and perception.
+
+Incidence::
+  the onset of a tone must not be confused with the ``first wavefront''; rather, it is the point where it departs from
+  the background. While the quality of incidence is perceived only ever in retrospect or by repetition, it has a strong
+  priming and focussing influence on the way of entrance of the tone. Moreover, it is a constituent part of the ``feel''
+  the _musician_ gets when _playing_ an instrument. The temporal dimension of the incidence is roughly 1 ms.
+
+Consonant::
+  a musical tone explicitly takes its place, to participate in rhythm and melody; this move is marked by a pronounced
+  structure akin to consonants in spoken language. This consonant takes various forms, it can be soft or sharp, aggressive
+  or aspirated, modulated, expansive or aligned -- but it is never just some noise ``tacked on'' to the tone, it is formed
+  by excess of the same parts forming the tonal succession. During the consonant phase, movements and transients are not
+  discerned individually, rather perceived as _materiality of the tone._ The temporal dimension of the consonant spans
+  roughly 20ms.
+
+Vowel::
+  when the initial movement heads towards a sonic form, the tone transitions through or into a resonant spectral envelope,
+  including progression and movement of formants. This motion integrates the preceding consonant with the tone, thereby
+  conveying size and weight of the tone to come. The vowel is formed during the first 120ms.
+
+Extension::
+  The preceding phases are generated by the various constituents of a tone raising into view; such an initial movement
+  of entrance extends up to roughly 1/4 sec. Once a tone is present, we are able to notice its temporal extension,
+  when the tone is held. Only changes after that point are perceived explicitly as _expressiveness._  A short sound
+  terminating during this initial move, remains percussive. As an exception, some instruments are plucked, beaten or
+  tolled and extend their initial percussive move by an decaying, resonant ringing.
+
+Forms of Perception
+^^^^^^^^^^^^^^^^^^^
+The segregation of several phases during the beginning of a musical tone is deeply rooted within the human
+perception of sound. As research in Neurophysiology indicates, any sound perception is based on forming a hypothesis,
+to establish the direction and basic nature of a sound. The initial window of discrimination is closed very quickly
+after roughly 1ms; beyond that point, further sensory data is used only to augment the established hypothesis if it
+fits in, or suppressed otherwise. This is known as the »Haas Precedence Effect«.
+
+If we hold our attention and gained confidence into the adequateness of our initial hypothesis, after 20ms the total
+blocking is released, allowing further abundant sensory data to enter a _background thread of perception._
+We may notice reverberation this way, or the onset of further notes and accompanying instruments, while our
+_foreground thread of perception_ augments the spatiality and detailed make-up of the sonic event taken into focus.
+
+Movement
+~~~~~~~~
+In music, this focus precedes the perception itself. Repetition sharpens perception. Understanding shapes perception.
+If something is part of a meaningful context we can grasp, if we ourselves are part of that context, like in music
+we enact and know by heart, apprehension and perception are raised to join on par with the movement -- which is
+not effected thus by some moving parts, it _emerges_ rather when bringing together related elements. Like a melody, which
+does not ``move'' by shifting some ``frequencies''. The composition, the score, arranges various notes, each of them
+entirely static. If the score is solid, they are in no need for especially ``expressive'' performance -- it suffices
+if they lend themselves to the movement of melody and accompaniment. Likewise the tone of a musical instrument does
+not need to be pushed, tweaked and bent in especially ``expressive'' ways to fabricate musicality. Yet it needs an
+intrinsic plasticity and openness, which lends itself to bear the weight and sustain the movement of the score.
+
+Build-up
+^^^^^^^^
+[quote, Iannis Xenakis, Formalized Music]
+A complex sound may be imagined as a multicolored firework in which each point of light appears and instantaneously
+disappears against a dark sky (...) A line of light would be created by a sufficiently large multitude of points
+appearing and disappearing instantaneously.footnote:[Xenaiks, Iannis. 1992. »Formalized Music« Revised edition.
+New York: Pendragon Press]
+
+And this clarifies the difficulty we face in attempt to build musical instruments from techniques of sound synthesis.
+The theory underlying their construction is biassed towards succinct formulaic definition, logical cleanliness and
+mathematical precision -- traits, which carry over into the generated sound. Attempts to apply a secondary
+``dynamisation'' suffer from being extraneous and supplementary. As can be seen with a simple LFO, we are forced
+to navigate a thin line between arbitrary unmotivated movement, genericity and plain ineffectiveness.
+
+A common (and actually quite effective) escape path from this dilemma is to _inject a captured natural texture,_ which
+leads to sampling, re-synthesis or human-operated sound controllers. The work presented here favours a different
+approach: we build structural elements (spectrum and generator parametrisation, envelopes, resonance filters), which
+are then _superimposed into a fabric_ to counterbalance each other. This fabric can be fine tuned to a point where
+it suffices to place it into a musical context to evoke the musical behaviour we aim for. 
+
+
+Fabric and Voicing
+------------------
+Layers and Fusing
+~~~~~~~~~~~~~~~~~
+Challenges of Layering
+^^^^^^^^^^^^^^^^^^^^^^
+However, as ``Layering'' means to operate several sound generators in parallel, triggered by the same MIDI events,
+we have to face several new challenges. Without further precautions, we get just a mere assembly of different voices
+playing together -- these need to be different in some way, because what would be the point of layering anyway?
+Maybe we are not content with the way a given algorithm performs in some area. But with layering, we end up with
+_several_ not entirely convincing algorithms working in parallel. Different sounds _move differently:_ they have a
+different way of entering the stage, they behave differently over the various registers, and they provoke a different
+response from the room of the performance. And this problem gets worse with any further degree of freedom, e.g. velocity.
+
+self-contained Unit
+^^^^^^^^^^^^^^^^^^^
+Fortunately we are not alone. Instrument builders and composers have successfully dealt with that problem down the years.
+Just consider the »Werk Principle« of organ building, or the idea of organic orchestration. The essential idea is not
+to assemble everything into one top-level, but rather to create several self-contained units arranged side by side
+within a charged relationship. And to enable these tensions, we need a lot of similarity amongst our units, yet no
+conformity. So, when we move, we move weights, without breaking the relation.
+
+To translate this into the realm of sound synthesis instruments, we first have to look for the _unit._ This might be
+a unit of construction, a module within the synthesizer. It might also be a unit of control, a given algorithm with
+its associated set of parameter values. Yet none of these gets us anywhere close to the realm we have in mind. Rather,
+what we should be looking for, is a _musical identity_, a character. Which immediately raises the second question,
+about the _means of closure._ If our unit is not a constructive one, what can we do in practice than to meld several
+given parts of the synthesiser to form such an identity? In fact, there are several well-known (and even scientifically
+well researched) _practical techniques of sound work_ to achieve this goal:
+
+resonance:: have several distinct generators use the same common resonance filter
+envelope:: use a similar spectral envelope, structure or weight distribution
+movement:: move various parts in a coordinated way, a common LFO or temporal envelope
+
+
+Similarities
+~~~~~~~~~~~~
+These techniques work quite well and give us lots of options to create coherent units. So the more challenging
+but also a considerably more rewarding question in practice turns out to be the search for similarities and relatedness.
+
+Modification vs. Affinity
+^^^^^^^^^^^^^^^^^^^^^^^^^
+A naive approach would be to take some entity and modify its ``properties'' in order to create ``another flavour.''
+Such turns out to be problematic for several reasons. For one, we _imposed changes,_ so we made something different,
+not something similar. Moreover, chances are that the changes we imposed made matters worse, not better -- as is always
+the case in art, when we modify something we had already achieved. And then to use those modified instances as building blocks,
+superimposed into a fabric, creates another problem: Perception tends to single out the variations. When the framework
+moves, stretches and bends, not only will those changes appear as detached entities on their own in ways never intended,
+also their appearance will create spurious temporal and rhythmic elements. So, _as instrument builders,_ we really need
+to build several self-contained units from ground up with related identity and affinity to each other. We should search
+for ways to _move laterally,_ while still in the middle of the process of building, And we should observe, on what
+specific trait the fusing occurs, and what other elements constitute the kind of irresolvable tension we need.
+
+Related by similar evolution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+An important practical way to achieve such forms of similarity is to go through the process of building an entity
+_several times,_ instead of re-using and tweaking. And to take that even a step further, we can transform and
+translate into a different medium, and work from there towards a similar goal, a similar musical identity.
+ZynAddSubFX / Yoshimi offer various opportunities for such lateral transformations:
+
+- build a spectrum with similar character but different structure
+- let substantially different spectra work against similar envelopes, but fine tune each combination individually
+- transform a spectrum from the AddSynth into the SubSynth or PadSynth and re-establish its character there
+- use the spectral line mutations of PadSynth to create a different kind of materiality, then recombine and
+  work from there towards a related musical character
+- change the generating function, use waveshaping and spectrum adjustments. But then work from there towards similarity
+- superimpose several layers to generate beating patterns, use LFOs with randomisation, use chorus
+
+With any of these cases it is of the uttermost importance not just to _modify_ but to use these techniques as a means of
+lateral movement. Thereafter, combine several layers according to a fundamentally similar plan, and _then_ go through all the
+extended work of shaping the temporal envelopes.
+
+Fracture lines
+^^^^^^^^^^^^^^
+This brings about the question where to root the overall strategic working plan when building an instrument in this
+manner. But there is no methodical answer to this question -- because _this_ is what shapes your actual inspiration and achievement.
+Yet this framework is not entirely subjective either. It is _rooted within your musical horizon._ And when you understand
+the way of music, you'll learn to work along the fracture lines inherent in the matter we're working with:
+
+vertical fracture lines::
+ - Melody <--> support
+ - low melody <--> high melody
+ - Bass <--> Subbass
+ - the small octave
+
+horizontal fracture lines::
+ - percussive <--> consonant
+ - consonant <--> vowel
+ - vowel <--> colouration
+
+turns of enrichment::
+ - excess and expression
+ - obvious and hidden qualities
+ - ambivalence and agility
+
+
+Conclusion
+----------
+Limitations
+~~~~~~~~~~~
+Based on the present work, we could demonstrate a way to build synthetic musical instruments with ZynAddSubFX / Yoshimi.
+This task does have some limitations:
+
+architecture shortcomings::
+  The wiring of the modules turns out to be limited at times, forcing us to work with copies, which are hard
+  to maintain and keep in sync while the instrument matures. Parameter resolution was also sometimes an issue,
+  and the difficulty of fine-grained control through the UI. Use of controllers beyond velocity is difficult,
+  due to the lack of an independent overarching control layer allowing to fine tune simultaneous adjustments
+  of several parameters by a single controller
+
+quality and stability::
+  The quality of the DA converters and playback equipment heavily matters for this kind of work.
+  The performance of the algorithms also imposes limitations on adjustments and control. Another issue
+  is the durability of settings, since we spend a huge amount of time fine tuning settings, which
+  could be invalidated any time by an incompatible update of the audio processing code.
+  And finally, this kind of work depends on knowledge and understanding of musical concerns.
+
+Further possibilities
+^^^^^^^^^^^^^^^^^^^^^
+One possible field for further work could be to use the proven algorithms within an extended, more flexible architecture,
+to allow for structuring beyond synthesis modules and layers. Moreover, the question of how to expose controllers seems worth
+exploring. It is clear that ``vibrato frequency'' is not a _musical_ entity to handle, yet something like ``expression''
+is too generic to become prolific. Another possibility would be to look into networks of synthetic instruments, which
+are linked to respond to the other peer instruments. But on terms of musicality, not as physics simulation.
+
+Multivalency
+~~~~~~~~~~~~
+It is possible to _build synthetic instruments with inbuilt musicality._ +
+The turning point for this kind of instrument building is to strive for a quality of multivalency, to create, within
+the sonic texture, attachment points for internal and external linking, for relations, fusing and tension. A musical
+tone with adequate qualities allows to link to an already established Gestalt hypothesis, link to a musical line and ark
+to enable expression, link to a harmonic scheme to enable weight and shading and join with the movement of the score.
+The character of voice emerges as residuum.
