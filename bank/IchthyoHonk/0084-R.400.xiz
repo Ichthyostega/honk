@@ -19,10 +19,10 @@ Yoshimi-author="Alan Ernest Calvert" Yoshimi-major="1" Yoshimi-minor="5">
 </BASE_PARAMETERS>
 <INSTRUMENT>
 <INFO>
-<string name="name">Reedy</string>
+<string name="name">R.400</string>
 <string name="author">Ichthyostega
 CC-By-SA 3+</string>
-<string name="comments">Drafts towards a reed instrument (WIP.9)</string>
+<string name="comments">Shortened Envelopes conditioned to 400ms</string>
 <par name="type" value="9" />
 </INFO>
 <INSTRUMENT_KIT>
@@ -987,8 +987,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="30" />
-<par name="env_sustain" value="23" />
+<par name="env_points" value="29" />
+<par name="env_sustain" value="27" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -1064,58 +1064,54 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="16">
 <par name="dt" value="8" />
-<par name="val" value="111" />
+<par name="val" value="117" />
 </POINT>
 <POINT id="17">
 <par name="dt" value="9" />
-<par name="val" value="101" />
+<par name="val" value="110" />
 </POINT>
 <POINT id="18">
 <par name="dt" value="10" />
-<par name="val" value="92" />
+<par name="val" value="106" />
 </POINT>
 <POINT id="19">
 <par name="dt" value="10" />
-<par name="val" value="87" />
+<par name="val" value="106" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="10" />
-<par name="val" value="90" />
+<par name="val" value="109" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="7" />
-<par name="val" value="95" />
+<par name="val" value="111" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="7" />
-<par name="val" value="102" />
+<par name="val" value="111" />
 </POINT>
 <POINT id="23">
-<par name="dt" value="45" />
-<par name="val" value="127" />
+<par name="dt" value="30" />
+<par name="val" value="108" />
 </POINT>
 <POINT id="24">
-<par name="dt" value="11" />
-<par name="val" value="94" />
+<par name="dt" value="28" />
+<par name="val" value="102" />
 </POINT>
 <POINT id="25">
-<par name="dt" value="11" />
-<par name="val" value="60" />
+<par name="dt" value="37" />
+<par name="val" value="122" />
 </POINT>
 <POINT id="26">
-<par name="dt" value="11" />
-<par name="val" value="33" />
+<par name="dt" value="37" />
+<par name="val" value="127" />
 </POINT>
 <POINT id="27">
-<par name="dt" value="11" />
-<par name="val" value="15" />
+<par name="dt" value="2" />
+<par name="val" value="127" />
 </POINT>
 <POINT id="28">
-<par name="dt" value="12" />
-<par name="val" value="0" />
-</POINT>
-<POINT id="29">
-<par name="dt" value="12" />
+<par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
 </AMPLITUDE_ENVELOPE>
@@ -1328,8 +1324,8 @@ CC-By-SA 3+</string>
 <par name="velocity_sensing" value="79" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="30" />
-<par name="env_sustain" value="28" />
+<par name="env_points" value="34" />
+<par name="env_sustain" value="32" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -1452,10 +1448,26 @@ CC-By-SA 3+</string>
 <par name="val" value="114" />
 </POINT>
 <POINT id="28">
-<par name="dt" value="34" />
-<par name="val" value="100" />
+<par name="dt" value="16" />
+<par name="val" value="101" />
 </POINT>
 <POINT id="29">
+<par name="dt" value="28" />
+<par name="val" value="111" />
+</POINT>
+<POINT id="30">
+<par name="dt" value="37" />
+<par name="val" value="115" />
+</POINT>
+<POINT id="31">
+<par name="dt" value="37" />
+<par name="val" value="100" />
+</POINT>
+<POINT id="32">
+<par name="dt" value="6" />
+<par name="val" value="100" />
+</POINT>
+<POINT id="33">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -1479,8 +1491,8 @@ CC-By-SA 3+</string>
 <par_bool name="band_width_envelope_enabled" value="yes" />
 <BANDWIDTH_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="12" />
-<par name="env_sustain" value="10" />
+<par name="env_points" value="17" />
+<par name="env_sustain" value="15" />
 <par name="env_stretch" value="26" />
 <par_bool name="forced_release" value="no" />
 <par_bool name="linear_envelope" value="no" />
@@ -1535,6 +1547,26 @@ CC-By-SA 3+</string>
 <par name="val" value="64" />
 </POINT>
 <POINT id="11">
+<par name="dt" value="40" />
+<par name="val" value="64" />
+</POINT>
+<POINT id="12">
+<par name="dt" value="28" />
+<par name="val" value="71" />
+</POINT>
+<POINT id="13">
+<par name="dt" value="37" />
+<par name="val" value="81" />
+</POINT>
+<POINT id="14">
+<par name="dt" value="37" />
+<par name="val" value="64" />
+</POINT>
+<POINT id="15">
+<par name="dt" value="3" />
+<par name="val" value="64" />
+</POINT>
+<POINT id="16">
 <par name="dt" value="0" />
 <par name="val" value="64" />
 </POINT>
@@ -3441,8 +3473,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="34" />
-<par name="env_sustain" value="32" />
+<par name="env_points" value="35" />
+<par name="env_sustain" value="33" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -3569,22 +3601,26 @@ CC-By-SA 3+</string>
 <par name="val" value="126" />
 </POINT>
 <POINT id="29">
-<par name="dt" value="13" />
-<par name="val" value="127" />
+<par name="dt" value="23" />
+<par name="val" value="120" />
 </POINT>
 <POINT id="30">
-<par name="dt" value="42" />
-<par name="val" value="119" />
+<par name="dt" value="24" />
+<par name="val" value="116" />
 </POINT>
 <POINT id="31">
-<par name="dt" value="45" />
-<par name="val" value="78" />
+<par name="dt" value="37" />
+<par name="val" value="113" />
 </POINT>
 <POINT id="32">
-<par name="dt" value="46" />
-<par name="val" value="0" />
+<par name="dt" value="38" />
+<par name="val" value="93" />
 </POINT>
 <POINT id="33">
+<par name="dt" value="2" />
+<par name="val" value="93" />
+</POINT>
+<POINT id="34">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -4192,8 +4228,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="31" />
-<par name="env_sustain" value="29" />
+<par name="env_points" value="36" />
+<par name="env_sustain" value="34" />
 <par name="env_stretch" value="47" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -4257,47 +4293,47 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="13">
 <par name="dt" value="1" />
-<par name="val" value="92" />
+<par name="val" value="84" />
 </POINT>
 <POINT id="14">
 <par name="dt" value="2" />
-<par name="val" value="105" />
+<par name="val" value="92" />
 </POINT>
 <POINT id="15">
 <par name="dt" value="3" />
-<par name="val" value="115" />
+<par name="val" value="99" />
 </POINT>
 <POINT id="16">
 <par name="dt" value="3" />
-<par name="val" value="120" />
+<par name="val" value="105" />
 </POINT>
 <POINT id="17">
 <par name="dt" value="2" />
-<par name="val" value="122" />
+<par name="val" value="108" />
 </POINT>
 <POINT id="18">
 <par name="dt" value="4" />
-<par name="val" value="124" />
+<par name="val" value="111" />
 </POINT>
 <POINT id="19">
 <par name="dt" value="5" />
-<par name="val" value="126" />
+<par name="val" value="112" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="4" />
-<par name="val" value="127" />
+<par name="val" value="114" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="4" />
-<par name="val" value="127" />
+<par name="val" value="112" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="8" />
-<par name="val" value="125" />
+<par name="val" value="111" />
 </POINT>
 <POINT id="23">
 <par name="dt" value="10" />
-<par name="val" value="121" />
+<par name="val" value="112" />
 </POINT>
 <POINT id="24">
 <par name="dt" value="9" />
@@ -4305,25 +4341,45 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="25">
 <par name="dt" value="11" />
-<par name="val" value="98" />
+<par name="val" value="121" />
 </POINT>
 <POINT id="26">
 <par name="dt" value="13" />
-<par name="val" value="84" />
+<par name="val" value="126" />
 </POINT>
 <POINT id="27">
 <par name="dt" value="13" />
-<par name="val" value="69" />
+<par name="val" value="119" />
 </POINT>
 <POINT id="28">
 <par name="dt" value="13" />
-<par name="val" value="37" />
+<par name="val" value="103" />
 </POINT>
 <POINT id="29">
 <par name="dt" value="13" />
-<par name="val" value="0" />
+<par name="val" value="78" />
 </POINT>
 <POINT id="30">
+<par name="dt" value="22" />
+<par name="val" value="48" />
+</POINT>
+<POINT id="31">
+<par name="dt" value="24" />
+<par name="val" value="8" />
+</POINT>
+<POINT id="32">
+<par name="dt" value="37" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="33">
+<par name="dt" value="37" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="34">
+<par name="dt" value="8" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="35">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -4954,8 +5010,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="31" />
-<par name="env_sustain" value="29" />
+<par name="env_points" value="36" />
+<par name="env_sustain" value="34" />
 <par name="env_stretch" value="47" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -5086,6 +5142,26 @@ CC-By-SA 3+</string>
 <par name="val" value="0" />
 </POINT>
 <POINT id="30">
+<par name="dt" value="24" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="31">
+<par name="dt" value="23" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="32">
+<par name="dt" value="37" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="33">
+<par name="dt" value="37" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="34">
+<par name="dt" value="10" />
+<par name="val" value="0" />
+</POINT>
+<POINT id="35">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -5720,8 +5796,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="39" />
-<par name="env_sustain" value="37" />
+<par name="env_points" value="31" />
+<par name="env_sustain" value="29" />
 <par name="env_stretch" value="7" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -5781,109 +5857,77 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="12">
 <par name="dt" value="9" />
-<par name="val" value="35" />
+<par name="val" value="53" />
 </POINT>
 <POINT id="13">
 <par name="dt" value="9" />
-<par name="val" value="43" />
+<par name="val" value="81" />
 </POINT>
 <POINT id="14">
 <par name="dt" value="9" />
-<par name="val" value="53" />
+<par name="val" value="89" />
 </POINT>
 <POINT id="15">
 <par name="dt" value="10" />
-<par name="val" value="49" />
+<par name="val" value="86" />
 </POINT>
 <POINT id="16">
 <par name="dt" value="10" />
-<par name="val" value="37" />
+<par name="val" value="68" />
 </POINT>
 <POINT id="17">
 <par name="dt" value="4" />
-<par name="val" value="59" />
+<par name="val" value="78" />
 </POINT>
 <POINT id="18">
 <par name="dt" value="4" />
-<par name="val" value="71" />
+<par name="val" value="88" />
 </POINT>
 <POINT id="19">
 <par name="dt" value="9" />
-<par name="val" value="89" />
+<par name="val" value="95" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="5" />
-<par name="val" value="102" />
+<par name="val" value="95" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="8" />
-<par name="val" value="106" />
+<par name="val" value="84" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="10" />
-<par name="val" value="113" />
+<par name="val" value="100" />
 </POINT>
 <POINT id="23">
 <par name="dt" value="10" />
-<par name="val" value="118" />
+<par name="val" value="108" />
 </POINT>
 <POINT id="24">
 <par name="dt" value="12" />
-<par name="val" value="114" />
+<par name="val" value="102" />
 </POINT>
 <POINT id="25">
 <par name="dt" value="13" />
-<par name="val" value="100" />
+<par name="val" value="93" />
 </POINT>
 <POINT id="26">
-<par name="dt" value="17" />
-<par name="val" value="91" />
+<par name="dt" value="24" />
+<par name="val" value="98" />
 </POINT>
 <POINT id="27">
-<par name="dt" value="28" />
-<par name="val" value="79" />
+<par name="dt" value="37" />
+<par name="val" value="92" />
 </POINT>
 <POINT id="28">
-<par name="dt" value="29" />
-<par name="val" value="84" />
-</POINT>
-<POINT id="29">
 <par name="dt" value="37" />
 <par name="val" value="88" />
 </POINT>
+<POINT id="29">
+<par name="dt" value="10" />
+<par name="val" value="88" />
+</POINT>
 <POINT id="30">
-<par name="dt" value="38" />
-<par name="val" value="83" />
-</POINT>
-<POINT id="31">
-<par name="dt" value="35" />
-<par name="val" value="74" />
-</POINT>
-<POINT id="32">
-<par name="dt" value="43" />
-<par name="val" value="60" />
-</POINT>
-<POINT id="33">
-<par name="dt" value="45" />
-<par name="val" value="51" />
-</POINT>
-<POINT id="34">
-<par name="dt" value="54" />
-<par name="val" value="92" />
-</POINT>
-<POINT id="35">
-<par name="dt" value="50" />
-<par name="val" value="110" />
-</POINT>
-<POINT id="36">
-<par name="dt" value="56" />
-<par name="val" value="122" />
-</POINT>
-<POINT id="37">
-<par name="dt" value="60" />
-<par name="val" value="127" />
-</POINT>
-<POINT id="38">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -6480,8 +6524,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="39" />
-<par name="env_sustain" value="37" />
+<par name="env_points" value="35" />
+<par name="env_sustain" value="33" />
 <par name="env_stretch" value="11" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -6605,45 +6649,29 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="28">
 <par name="dt" value="8" />
-<par name="val" value="90" />
-</POINT>
-<POINT id="29">
-<par name="dt" value="9" />
-<par name="val" value="91" />
-</POINT>
-<POINT id="30">
-<par name="dt" value="9" />
-<par name="val" value="93" />
-</POINT>
-<POINT id="31">
-<par name="dt" value="11" />
-<par name="val" value="94" />
-</POINT>
-<POINT id="32">
-<par name="dt" value="13" />
-<par name="val" value="95" />
-</POINT>
-<POINT id="33">
-<par name="dt" value="13" />
-<par name="val" value="96" />
-</POINT>
-<POINT id="34">
-<par name="dt" value="13" />
 <par name="val" value="99" />
 </POINT>
-<POINT id="35">
-<par name="dt" value="14" />
-<par name="val" value="103" />
+<POINT id="29">
+<par name="dt" value="19" />
+<par name="val" value="106" />
 </POINT>
-<POINT id="36">
-<par name="dt" value="45" />
+<POINT id="30">
+<par name="dt" value="29" />
+<par name="val" value="110" />
+</POINT>
+<POINT id="31">
+<par name="dt" value="35" />
+<par name="val" value="113" />
+</POINT>
+<POINT id="32">
+<par name="dt" value="38" />
 <par name="val" value="122" />
 </POINT>
-<POINT id="37">
-<par name="dt" value="45" />
-<par name="val" value="127" />
+<POINT id="33">
+<par name="dt" value="2" />
+<par name="val" value="122" />
 </POINT>
-<POINT id="38">
+<POINT id="34">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -7244,8 +7272,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="40" />
-<par name="env_sustain" value="38" />
+<par name="env_points" value="29" />
+<par name="env_sustain" value="27" />
 <par name="env_stretch" value="7" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -7333,85 +7361,41 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="19">
 <par name="dt" value="9" />
-<par name="val" value="87" />
+<par name="val" value="91" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="8" />
-<par name="val" value="78" />
+<par name="val" value="80" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="14" />
-<par name="val" value="66" />
+<par name="val" value="71" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="17" />
-<par name="val" value="58" />
+<par name="val" value="66" />
 </POINT>
 <POINT id="23">
-<par name="dt" value="11" />
-<par name="val" value="53" />
+<par name="dt" value="14" />
+<par name="val" value="65" />
 </POINT>
 <POINT id="24">
-<par name="dt" value="13" />
-<par name="val" value="49" />
+<par name="dt" value="25" />
+<par name="val" value="63" />
 </POINT>
 <POINT id="25">
-<par name="dt" value="13" />
-<par name="val" value="56" />
+<par name="dt" value="37" />
+<par name="val" value="99" />
 </POINT>
 <POINT id="26">
-<par name="dt" value="13" />
-<par name="val" value="61" />
+<par name="dt" value="37" />
+<par name="val" value="125" />
 </POINT>
 <POINT id="27">
-<par name="dt" value="13" />
-<par name="val" value="69" />
+<par name="dt" value="1" />
+<par name="val" value="125" />
 </POINT>
 <POINT id="28">
-<par name="dt" value="26" />
-<par name="val" value="85" />
-</POINT>
-<POINT id="29">
-<par name="dt" value="34" />
-<par name="val" value="104" />
-</POINT>
-<POINT id="30">
-<par name="dt" value="44" />
-<par name="val" value="125" />
-</POINT>
-<POINT id="31">
-<par name="dt" value="45" />
-<par name="val" value="127" />
-</POINT>
-<POINT id="32">
-<par name="dt" value="45" />
-<par name="val" value="125" />
-</POINT>
-<POINT id="33">
-<par name="dt" value="47" />
-<par name="val" value="118" />
-</POINT>
-<POINT id="34">
-<par name="dt" value="48" />
-<par name="val" value="111" />
-</POINT>
-<POINT id="35">
-<par name="dt" value="48" />
-<par name="val" value="103" />
-</POINT>
-<POINT id="36">
-<par name="dt" value="53" />
-<par name="val" value="90" />
-</POINT>
-<POINT id="37">
-<par name="dt" value="56" />
-<par name="val" value="79" />
-</POINT>
-<POINT id="38">
-<par name="dt" value="60" />
-<par name="val" value="68" />
-</POINT>
-<POINT id="39">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -8524,8 +8508,8 @@ CC-By-SA 3+</string>
 <par name="punch_velocity_sensing" value="72" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="35" />
-<par name="env_sustain" value="33" />
+<par name="env_points" value="31" />
+<par name="env_sustain" value="29" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -8613,65 +8597,49 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="19">
 <par name="dt" value="6" />
-<par name="val" value="82" />
+<par name="val" value="87" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="7" />
-<par name="val" value="87" />
+<par name="val" value="93" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="9" />
-<par name="val" value="94" />
+<par name="val" value="99" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="11" />
-<par name="val" value="99" />
+<par name="val" value="113" />
 </POINT>
 <POINT id="23">
 <par name="dt" value="10" />
-<par name="val" value="104" />
+<par name="val" value="108" />
 </POINT>
 <POINT id="24">
 <par name="dt" value="9" />
-<par name="val" value="105" />
+<par name="val" value="115" />
 </POINT>
 <POINT id="25">
 <par name="dt" value="12" />
-<par name="val" value="106" />
+<par name="val" value="112" />
 </POINT>
 <POINT id="26">
-<par name="dt" value="9" />
-<par name="val" value="116" />
-</POINT>
-<POINT id="27">
-<par name="dt" value="9" />
-<par name="val" value="117" />
-</POINT>
-<POINT id="28">
-<par name="dt" value="11" />
+<par name="dt" value="29" />
 <par name="val" value="118" />
 </POINT>
-<POINT id="29">
-<par name="dt" value="13" />
-<par name="val" value="119" />
+<POINT id="27">
+<par name="dt" value="35" />
+<par name="val" value="118" />
 </POINT>
-<POINT id="30">
-<par name="dt" value="13" />
-<par name="val" value="120" />
-</POINT>
-<POINT id="31">
-<par name="dt" value="13" />
-<par name="val" value="121" />
-</POINT>
-<POINT id="32">
-<par name="dt" value="13" />
-<par name="val" value="123" />
-</POINT>
-<POINT id="33">
-<par name="dt" value="45" />
+<POINT id="28">
+<par name="dt" value="38" />
 <par name="val" value="127" />
 </POINT>
-<POINT id="34">
+<POINT id="29">
+<par name="dt" value="5" />
+<par name="val" value="127" />
+</POINT>
+<POINT id="30">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -9723,8 +9691,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="27" />
-<par name="env_sustain" value="25" />
+<par name="env_points" value="26" />
+<par name="env_sustain" value="24" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -9816,29 +9784,25 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="20">
 <par name="dt" value="9" />
-<par name="val" value="108" />
+<par name="val" value="107" />
 </POINT>
 <POINT id="21">
-<par name="dt" value="9" />
-<par name="val" value="111" />
+<par name="dt" value="29" />
+<par name="val" value="102" />
 </POINT>
 <POINT id="22">
-<par name="dt" value="11" />
-<par name="val" value="115" />
+<par name="dt" value="35" />
+<par name="val" value="94" />
 </POINT>
 <POINT id="23">
-<par name="dt" value="13" />
-<par name="val" value="119" />
-</POINT>
-<POINT id="24">
-<par name="dt" value="32" />
-<par name="val" value="122" />
-</POINT>
-<POINT id="25">
-<par name="dt" value="45" />
+<par name="dt" value="38" />
 <par name="val" value="127" />
 </POINT>
-<POINT id="26">
+<POINT id="24">
+<par name="dt" value="0" />
+<par name="val" value="127" />
+</POINT>
+<POINT id="25">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -9931,8 +9895,8 @@ CC-By-SA 3+</string>
 <par_bool name="amp_envelope_enabled" value="yes" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="31" />
-<par name="env_sustain" value="29" />
+<par name="env_points" value="32" />
+<par name="env_sustain" value="30" />
 <par name="env_stretch" value="27" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -10047,22 +10011,26 @@ CC-By-SA 3+</string>
 <par name="val" value="126" />
 </POINT>
 <POINT id="26">
-<par name="dt" value="13" />
+<par name="dt" value="12" />
 <par name="val" value="127" />
 </POINT>
 <POINT id="27">
-<par name="dt" value="42" />
-<par name="val" value="114" />
+<par name="dt" value="29" />
+<par name="val" value="111" />
 </POINT>
 <POINT id="28">
-<par name="dt" value="45" />
-<par name="val" value="78" />
+<par name="dt" value="35" />
+<par name="val" value="99" />
 </POINT>
 <POINT id="29">
-<par name="dt" value="45" />
-<par name="val" value="0" />
+<par name="dt" value="38" />
+<par name="val" value="78" />
 </POINT>
 <POINT id="30">
+<par name="dt" value="1" />
+<par name="val" value="78" />
+</POINT>
+<POINT id="31">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
@@ -10987,8 +10955,8 @@ CC-By-SA 3+</string>
 <par name="punch_velocity_sensing" value="72" />
 <AMPLITUDE_ENVELOPE>
 <par_bool name="free_mode" value="yes" />
-<par name="env_points" value="36" />
-<par name="env_sustain" value="34" />
+<par name="env_points" value="35" />
+<par name="env_sustain" value="33" />
 <par name="env_stretch" value="10" />
 <par_bool name="forced_release" value="yes" />
 <par_bool name="linear_envelope" value="no" />
@@ -11068,27 +11036,27 @@ CC-By-SA 3+</string>
 </POINT>
 <POINT id="17">
 <par name="dt" value="5" />
-<par name="val" value="116" />
+<par name="val" value="117" />
 </POINT>
 <POINT id="18">
 <par name="dt" value="4" />
-<par name="val" value="113" />
+<par name="val" value="114" />
 </POINT>
 <POINT id="19">
 <par name="dt" value="5" />
-<par name="val" value="112" />
+<par name="val" value="115" />
 </POINT>
 <POINT id="20">
 <par name="dt" value="10" />
-<par name="val" value="111" />
+<par name="val" value="117" />
 </POINT>
 <POINT id="21">
 <par name="dt" value="10" />
-<par name="val" value="112" />
+<par name="val" value="121" />
 </POINT>
 <POINT id="22">
 <par name="dt" value="10" />
-<par name="val" value="120" />
+<par name="val" value="122" />
 </POINT>
 <POINT id="23">
 <par name="dt" value="9" />
@@ -11115,30 +11083,26 @@ CC-By-SA 3+</string>
 <par name="val" value="120" />
 </POINT>
 <POINT id="29">
-<par name="dt" value="13" />
-<par name="val" value="117" />
+<par name="dt" value="17" />
+<par name="val" value="118" />
 </POINT>
 <POINT id="30">
-<par name="dt" value="13" />
-<par name="val" value="114" />
+<par name="dt" value="29" />
+<par name="val" value="120" />
 </POINT>
 <POINT id="31">
-<par name="dt" value="25" />
-<par name="val" value="107" />
+<par name="dt" value="35" />
+<par name="val" value="117" />
 </POINT>
 <POINT id="32">
-<par name="dt" value="29" />
-<par name="val" value="101" />
-</POINT>
-<POINT id="33">
 <par name="dt" value="37" />
 <par name="val" value="99" />
 </POINT>
-<POINT id="34">
-<par name="dt" value="46" />
-<par name="val" value="103" />
+<POINT id="33">
+<par name="dt" value="7" />
+<par name="val" value="99" />
 </POINT>
-<POINT id="35">
+<POINT id="34">
 <par name="dt" value="0" />
 <par name="val" value="0" />
 </POINT>
