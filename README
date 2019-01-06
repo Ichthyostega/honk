@@ -23,3 +23,15 @@ Updates
 Several improvements to the transients of »Reedy« (since the Version used for LAC).
 Needs some further work to smooth them out, but overall, the voice now approaches
 completion.
+
+.2019-1-6
+Adjustment to go with the LFO-Fix provided by Yoshimi 1.5.10.
+As it turns out, only »Reedy« got significant fine-tuning to the LFO-Phase
+during the time where Yoshimi contained the Bug for Frequency-LFO, and thus needs
+to be ported in order to behave equivalent. For context, Yoshimi 1.5.1 through 1.5.9
+started the Frequency-LFO with maximal positive offset (like a cosine), while it would
+be correct to start it with 0 and ascending (like a sine).
+The resulting differences can be audible, especially when interacting with the initial
+transient of a voice; yet typically the change is quite subtle and only obvious in
+direct comparison.
+

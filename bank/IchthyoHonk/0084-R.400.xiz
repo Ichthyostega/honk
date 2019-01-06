@@ -3651,7 +3651,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.898776054" exact_value="0x3F661630" />
 <par name="intensity" value="21" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="5" />
 <par name="randomness_amplitude" value="19" />
 <par name="randomness_frequency" value="47" />
@@ -5215,7 +5215,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.31133297" exact_value="0x3E9F6709" />
 <par name="intensity" value="39" />
-<par name="start_phase" value="19" />
+<par name="start_phase" value="51" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="0" />
 <par name="randomness_frequency" value="0" />
@@ -5947,7 +5947,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.586849987" exact_value="0x3F163BCD" />
 <par name="intensity" value="9" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="0" />
 <par name="randomness_frequency" value="0" />
@@ -6691,7 +6691,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.489298373" exact_value="0x3EFA8551" />
 <par name="intensity" value="5" />
-<par name="start_phase" value="66" />
+<par name="start_phase" value="98" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="0" />
 <par name="randomness_frequency" value="0" />
@@ -7415,7 +7415,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.61087656" exact_value="0x3F1C6268" />
 <par name="intensity" value="33" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="0" />
 <par name="randomness_frequency" value="0" />
@@ -8682,7 +8682,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.735799968" exact_value="0x3F3C5D63" />
 <par name="intensity" value="4" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="0" />
 <par name="randomness_frequency" value="0" />
@@ -9822,7 +9822,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.489298373" exact_value="0x3EFA8551" />
 <par name="intensity" value="26" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="13" />
 <par name="randomness_frequency" value="51" />
@@ -10050,7 +10050,7 @@ CC-By-SA 3+</string>
 <FREQUENCY_LFO>
 <par_real name="freq" value="0.489298373" exact_value="0x3EFA8551" />
 <par name="intensity" value="49" />
-<par name="start_phase" value="64" />
+<par name="start_phase" value="96" />
 <par name="lfo_type" value="0" />
 <par name="randomness_amplitude" value="13" />
 <par name="randomness_frequency" value="51" />
